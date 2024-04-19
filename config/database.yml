@@ -1,0 +1,27 @@
+default: &default
+  adapter: sqlserver
+  encoding: utf8
+  timeout: 1500
+  # password: railsstudent
+  # host: 172.18.0.2
+  
+development:  
+  <<: *default  
+  host: 172.18.0.2
+  username: appBiweekly  
+  password: <%= ENV["DEV_PASSWORD_DB"] %>
+  database: postsdb_development
+
+test:
+  <<: *default
+  host: 172.18.0.2
+  username: appBiweekly  
+  password: <%= ENV["DEV_PASSWORD_DB"] %>
+  database: postdb_test
+
+production:
+  <<: *default
+  host: 89.116.49.98
+  database: postsdb_production
+  username: biweeklyUserProd
+  password: <%= ENV["BIWEEKLY_BACK_DATABASE_PASSWORD"] %>

@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  message: MyString
+  fecha: 2024-04-18
+
+two:
+  message: MyString
+  fecha: 2024-04-18
