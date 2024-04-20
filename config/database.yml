@@ -7,8 +7,8 @@ default: &default
   
 development:  
   <<: *default  
-  host: 172.18.0.2
-  username: appBiweekly  
+  host: <%= ENV["HOST"] %>
+  username: <%= ENV["DEV_USERNAME_DB"] %>
   password: <%= ENV["DEV_PASSWORD_DB"] %>
   database: postsdb_development
 
